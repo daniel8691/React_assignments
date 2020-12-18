@@ -1,5 +1,6 @@
 import React from 'react';
-
+// import stylesheet
+import "./UserOutput.css"
 
 // TASK HERE IS TO CREATE TWO PARAGRAPHS
 
@@ -8,9 +9,13 @@ import React from 'react';
 const userOutput = (prop) => {
     return (
         // use a div becasue i want multiple elements together
-        <div>
-            <p>Username: {prop.username}</p>
-            <p>more random text</p>
+        <div className = "contentSeparation">
+            <div className="UserOutput">
+                <p>Username: {prop.username}</p>
+                <p>more random text</p>
+            </div>
+
+
         </div>
 
     )

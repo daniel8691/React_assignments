@@ -5,7 +5,7 @@ import React from 'react';
 // add properties
 const userInput = (props) => {
     // assign styling
-    const style = {
+    const inputStyle = {
         border: "2px solid red"
     }
 
@@ -13,6 +13,7 @@ const userInput = (props) => {
     return (
         <div className = "someInput">
             <input type="text" 
+            style={inputStyle}
             onChange={props.changed}
             value = {props.currentName} />
 

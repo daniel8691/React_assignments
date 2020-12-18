@@ -31,10 +31,10 @@ class App extends Component {
         <p className="App-intro">
           To get started, edit <code>src/App.js</code> and save to reload.
         </p>
-        <UserInput changed={this.usernameChangeHandler} someValue = {this.state.username}/>
+        <UserInput changed={this.usernameChangeHandler} currentName = {this.state.username}/>
         <UserOutput username = {this.state.username}/>
         <UserOutput username = {this.state.username}/>
-        <UserOutput username= {this.state.username}/>
+        <UserOutput username= "Daniel"/>
 
       </div>
     );
