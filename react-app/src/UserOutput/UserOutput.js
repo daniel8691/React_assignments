@@ -9,14 +9,14 @@ import "./UserOutput.css"
 const userOutput = (prop) => {
     return (
         // use a div becasue i want multiple elements together
-        <div className = "contentSeparation">
-            <div className="UserOutput">
-                <p>Username: {prop.username}</p>
-                <p>more random text</p>
-            </div>
-
-
+        // <div className = "contentSeparation">
+        <div className="UserOutput">
+            {/* <p>Username: {prop.username}</p> */}
+            <p>{prop.someUserInput}</p>
         </div>
+
+
+        // </div>
 
     )
 

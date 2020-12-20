@@ -15,7 +15,8 @@ const userInput = (props) => {
             <input type="text" 
             style={inputStyle}
             onChange={props.changed}
-            value = {props.currentName} />
+            value = {props.currentValue} /> 
+            {/* props.currentName FROM ASSIGNMENT 1 */}
 
 
         </div>

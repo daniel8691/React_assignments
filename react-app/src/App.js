@@ -9,8 +9,9 @@ import UserOutput from "./UserOutput/UserOutput"
 class App extends Component {
   // add property for the class (state)
   state = {
-    username: 'daniel8691'
-
+    // username: 'daniel8691'
+    someUserInput : 'test '
+    
   }
 
   // create eventHandler
@@ -19,6 +20,13 @@ class App extends Component {
     // use .setState() instead of changing the state directly
     this.setState({username: someEvent.target.value})
   }
+
+  inputChangedHandler = (event) => {
+    this.setState({someUserInput: event.target.value})
+  };
+
+
+  // 
 
 
   render() {
@@ -31,10 +39,18 @@ class App extends Component {
         <p className="App-intro">
           To get started, edit <code>src/App.js</code> and save to reload.
         </p>
-        <UserInput changed={this.usernameChangeHandler} currentName = {this.state.username}/>
+        <UserInput 
+        // FROM ASSIGNMENT 1
+        // changed={this.usernameChangeHandler} 
+        // currentName = {this.state.username}
+        // FROM ASSIGNMENT 2
+        changed = {this.inputChangedHandler}
+        currentValue = {this.state.someUserInput}
+        />
+        <p>{this.state.someUserInput}</p>
+        {/* <UserOutput username = {this.state.username}/>
         <UserOutput username = {this.state.username}/>
-        <UserOutput username = {this.state.username}/>
-        <UserOutput username= "Daniel"/>
+        <UserOutput username= "Daniel"/> */}
 
       </div>
     );
